@@ -6,7 +6,7 @@ The portfolio highlights my experience in building scalable payment systems and 
 
 🌐 Live Demo
 
-🔗 Portfolio Link: https://your-vercel-link.vercel.app
+🔗 Portfolio Link: https://shivraj-portfolio-nine.vercel.app
 
 (Replace this with your actual deployed link)
 
@@ -56,4 +56,5 @@ CGPA: 7.67
 📧 Email: sonawaneshivrajk@gmail.com
 📍 Location: Pune, Maharashtra, India
 🔗 LinkedIn: https://www.linkedin.com/in/shivraj-sonawane-9437882aa/
+
 💻 GitHub: https://github.com/shivrajks
