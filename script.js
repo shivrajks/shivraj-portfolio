@@ -1,126 +1,99 @@
-// Loader
-        window.addEventListener('load', function() {
-            setTimeout(() => {
-                document.getElementById('loader').style.opacity = '0';
-                setTimeout(() => {
-                    document.getElementById('loader').style.display = 'none';
-                }, 500);
-            }, 1000);
+(() => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const header = document.querySelector("[data-header]");
+    const progress = document.querySelector(".scroll-progress");
+    const menuToggle = document.querySelector("[data-menu-toggle]");
+    const mobileMenu = document.querySelector("[data-mobile-menu]");
+    const roleSwitcher = document.getElementById("role-switcher");
+    const year = document.getElementById("year");
+
+    if (year) {
+        year.textContent = String(new Date().getFullYear());
+    }
+
+    if (roleSwitcher && !reducedMotion) {
+        const roles = [
+            "Java Backend Developer",
+            "QA Automation Engineer",
+            "Software Tester",
+            "Problem Solver"
+        ];
+        let roleIndex = 0;
+
+        window.setInterval(() => {
+            roleIndex = (roleIndex + 1) % roles.length;
+            roleSwitcher.textContent = roles[roleIndex];
+        }, 2200);
+    }
+
+    const closeMenu = () => {
+        if (!menuToggle || !mobileMenu) return;
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        mobileMenu.classList.remove("is-open");
+    };
+
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!isOpen));
+            menuToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+            mobileMenu.classList.toggle("is-open", !isOpen);
         });
 
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeMenu);
         });
 
-        // Typed.js initialization
-        var typed = new Typed('#typed-text', {
-            strings: ['Backend Java Developer', 'Microservices Architect', 'Payment Systems Expert'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: true,
-            backDelay: 2000
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") closeMenu();
         });
+    }
 
-        // Mobile menu toggle
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+    let ticking = false;
+    const updateScrollState = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+
+        if (progress) {
+            progress.style.width = `${Math.min(100, Math.max(0, scrolled))}%`;
         }
 
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // Close mobile menu if open
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                }
-            });
-        });
-
-        // Particle animation
-        const canvas = document.getElementById('particles-canvas');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+        if (header) {
+            header.classList.toggle("is-scrolled", window.scrollY > 12);
         }
 
-        function createParticle() {
-            return {
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                vx: (Math.random() - 0.5) * 0.5,
-                vy: (Math.random() - 0.5) * 0.5,
-                radius: Math.random() * 2 + 1,
-                opacity: Math.random() * 0.5 + 0.2
-            };
+        ticking = false;
+    };
+
+    window.addEventListener("scroll", () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateScrollState);
+            ticking = true;
         }
+    }, { passive: true });
 
-        function initParticles() {
-            particles = [];
-            for (let i = 0; i < 50; i++) {
-                particles.push(createParticle());
-            }
-        }
+    window.addEventListener("resize", updateScrollState, { passive: true });
+    updateScrollState();
 
-        function drawParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            particles.forEach((particle, index) => {
-                particle.x += particle.vx;
-                particle.y += particle.vy;
-                
-                if (particle.x < 0 || particle.x > canvas.width) particle.vx = -particle.vx;
-                if (particle.y < 0 || particle.y > canvas.height) particle.vy = -particle.vy;
-                
-                ctx.beginPath();
-                ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(102, 126, 234, ${particle.opacity})`;
-                ctx.fill();
-                
-                // Draw lines between nearby particles
-                particles.forEach((otherParticle, otherIndex) => {
-                    if (index !== otherIndex) {
-                        const dx = particle.x - otherParticle.x;
-                        const dy = particle.y - otherParticle.y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (distance < 100) {
-                            ctx.beginPath();
-                            ctx.moveTo(particle.x, particle.y);
-                            ctx.lineTo(otherParticle.x, otherParticle.y);
-                            ctx.strokeStyle = `rgba(102, 126, 234, ${0.1 * (1 - distance / 100)})`;
-                            ctx.stroke();
-                        }
-                    }
-                });
-            });
-            
-            requestAnimationFrame(drawParticles);
-        }
+    const revealItems = document.querySelectorAll("[data-reveal]");
 
-        resizeCanvas();
-        initParticles();
-        drawParticles();
+    if (reducedMotion || !("IntersectionObserver" in window)) {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+        return;
+    }
 
-        window.addEventListener('resize', () => {
-            resizeCanvas();
-            initParticles();
-        });
-
-        // Add scroll animations
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.hero-gradient');
-            if (parallax) {
-                const speed = 0.5;
-                parallax.style.transform = `translateY(${scrolled * speed}px)`;
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
             }
         });
+    }, {
+        threshold: 0.16,
+        rootMargin: "0px 0px -8% 0px"
+    });
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+})();
