@@ -1,554 +1,821 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shivraj Sonwane is a Java backend and QA-focused software engineer from Pune, building Spring Boot APIs, SQL systems, Selenium automation, and production-style proof-of-work projects.">
-    <meta name="keywords" content="Shivraj Sonwane, Java Backend Developer, Spring Boot, QA Automation Engineer, Software Tester, Selenium, TestNG, Postman, SQL, Pune">
+    <meta
+      name="description"
+      content="Portfolio of Shivraj Sonwane, a Java-focused software engineer from Pune building Spring Boot backends, full-stack applications, SQL systems and software-testing workflows."
+    >
     <meta name="author" content="Shivraj Sonwane">
-    <meta name="theme-color" content="#050716">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://shivraj-portfolio-nine.vercel.app/">
 
-    <meta property="og:title" content="Shivraj Sonwane | Java Backend and QA Portfolio">
-    <meta property="og:description" content="A recruiter cockpit for reviewing Shivraj's backend, testing, database, and project proof-of-work.">
+    <meta
+      property="og:title"
+      content="Shivraj Sonwane - Java Backend &amp; Software Engineer"
+    >
+    <meta
+      property="og:description"
+      content="Java backend, full-stack and software-testing portfolio for Shivraj Sonwane in Pune, India."
+    >
     <meta property="og:type" content="website">
+    <meta
+      property="og:url"
+      content="https://shivraj-portfolio-nine.vercel.app/"
+    >
     <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shivraj Sonwane | Java Backend and QA Portfolio">
-    <meta name="twitter:description" content="Spring Boot, SQL, Selenium, Postman, and real project evidence for fresher software roles.">
+    <meta name="twitter:card" content="summary">
+    <meta
+      name="twitter:title"
+      content="Shivraj Sonwane - Java Backend &amp; Software Engineer"
+    >
+    <meta
+      name="twitter:description"
+      content="Spring Boot backends, full-stack products, SQL systems and testing workflows."
+    >
 
-    <title>Shivraj Sonwane | Java Backend and QA Portfolio</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>Shivraj Sonwane - Java Backend &amp; Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=JetBrains+Mono:wght@500;700&family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#06080f">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shivraj Sonwane",
+        "url": "https://shivraj-portfolio-nine.vercel.app/",
+        "email": "mailto:sonawaneshivrajk@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        },
+        "jobTitle": "Java Backend and Software Engineer",
+        "sameAs": [
+          "https://github.com/shivrajks",
+          "https://www.linkedin.com/in/shivraj-sonawane-9437882aa/"
+        ],
+        "knowsAbout": [
+          "Java",
+          "Spring Boot",
+          "REST APIs",
+          "PostgreSQL",
+          "Oracle SQL",
+          "React",
+          "Next.js",
+          "Software Testing",
+          "Selenium",
+          "Postman"
+        ]
+      }
+    </script>
+  </head>
+  <body>
     <a class="skip-link" href="#main">Skip to main content</a>
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="ambient-grid" aria-hidden="true"></div>
-
     <header class="site-header" data-header>
-        <div class="container nav-shell">
-            <a class="brand" href="#home" aria-label="Shivraj Sonwane home">
-                <span class="brand-mark">SS</span>
-                <span class="brand-copy">
-                    <span>Shivraj.OS</span>
-                    <small>Career console</small>
-                </span>
-            </a>
+      <div class="container nav-shell">
+        <a class="brand" href="#home" aria-label="Shivraj Sonwane home">
+          <span class="brand-name">Shivraj Sonwane</span>
+          <span class="brand-role">Software Engineer</span>
+        </a>
 
-            <nav class="desktop-nav" aria-label="Primary navigation">
-                <a href="#about">Profile</a>
-                <a href="#skills">Skill matrix</a>
-                <a href="#projects">Proof</a>
-                <a href="#qa-lab">QA lab</a>
-                <a href="#timeline">Timeline</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#journey">Journey</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-            <a class="nav-cta" href="mailto:sonawaneshivrajk@gmail.com?subject=Fresher%20role%20opportunity%20for%20Shivraj%20Sonwane">Hire signal</a>
-
-            <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <div class="nav-links">
+          <a
+            href="https://github.com/shivrajks"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/shivraj-sonawane-9437882aa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
         </div>
 
-        <nav class="mobile-nav" id="mobile-menu" data-mobile-menu aria-label="Mobile navigation">
-            <a href="#about">Profile</a>
-            <a href="#skills">Skill matrix</a>
-            <a href="#projects">Proof of work</a>
-            <a href="#qa-lab">QA lab</a>
-            <a href="#timeline">Timeline</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation menu"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav
+        class="mobile-nav"
+        id="mobile-menu"
+        data-mobile-menu
+        aria-label="Mobile navigation"
+        hidden
+      >
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+        <a
+          href="https://github.com/shivrajks"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+        <a
+          href="https://www.linkedin.com/in/shivraj-sonawane-9437882aa/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+      </nav>
     </header>
 
     <main id="main">
-        <section class="hero section" id="home" aria-labelledby="hero-title">
-            <div class="container hero-grid">
-                <div class="hero-copy" data-reveal>
-                    <p class="status-pill">
-                        <span class="pulse-dot" aria-hidden="true"></span>
-                        Available for fresher roles in Pune and remote-ready teams
-                    </p>
-
-                    <p class="eyebrow">Shivraj.OS / recruiter verification console</p>
-                    <h1 id="hero-title">Java backend builder with a QA operator's eye.</h1>
-                    <p class="role-line" aria-live="polite">
-                        Profile booted as <span id="role-switcher">Java Backend Developer</span>
-                    </p>
-                    <p class="hero-summary">
-                        I build practical backend and testing projects with Spring Boot, SQL, Selenium, TestNG, Postman, and GitHub. My focus is clean APIs, secure flows, traceable bugs, and systems a team can test before it trusts.
-                    </p>
-
-                    <div class="hero-actions" aria-label="Primary actions">
-                        <a class="button button-primary" href="#projects">Inspect proof of work</a>
-                        <a class="button button-secondary" href="https://github.com/shivrajks" target="_blank" rel="noopener noreferrer">Open GitHub</a>
-                        <a class="button button-quiet" href="Shivraj-Sonwane-Resume.md" download>Download resume</a>
-                    </div>
-
-                    <dl class="hero-signals" aria-label="Recruiter quick facts">
-                        <div>
-                            <dt>Role targets</dt>
-                            <dd>Backend, QA automation, software testing</dd>
-                        </div>
-                        <div>
-                            <dt>Proof stack</dt>
-                            <dd>Spring Boot, SQL, Selenium, Postman</dd>
-                        </div>
-                        <div>
-                            <dt>Location</dt>
-                            <dd>Pune, Maharashtra, India</dd>
-                        </div>
-                    </dl>
-                </div>
-
-                <div class="hero-console" data-reveal>
-                    <article class="console-card" aria-label="Shivraj OS proof console">
-                        <div class="window-bar">
-                            <span class="window-dot dot-red"></span>
-                            <span class="window-dot dot-amber"></span>
-                            <span class="window-dot dot-cyan"></span>
-                            <span class="window-title">career-proof.trace</span>
-                        </div>
-
-                        <div class="terminal-block" aria-label="Terminal verification output">
-                            <p><span>$</span> run shivraj --verify-role-fit</p>
-                            <p><strong>backend</strong> Spring Boot APIs, microservices, Stripe checkout</p>
-                            <p><strong>database</strong> Oracle SQL, MySQL, triggers, procedures</p>
-                            <p><strong>testing</strong> Selenium WebDriver, TestNG, Postman, bug reports</p>
-                            <p class="terminal-pass">status: recruiter scan ready</p>
-                        </div>
-
-                        <div class="payment-flow" aria-label="Payment integration architecture summary">
-                            <div class="flow-node">REST request</div>
-                            <div class="flow-node">Spring Boot service</div>
-                            <div class="flow-node">Stripe Checkout</div>
-                            <div class="flow-node">Webhook confirm</div>
-                            <div class="flow-node">Postman evidence</div>
-                        </div>
-
-                        <div class="console-footer">
-                            <span>QA gate: functional + regression mindset</span>
-                            <span>Build mode: practical projects</span>
-                        </div>
-                    </article>
-                </div>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="note-label">
+              Pune, Maharashtra / Open to entry-level roles
+            </p>
+            <h1 id="hero-title">
+              Building dependable software from API to test case.
+            </h1>
+            <p class="hero-summary">
+              I am Shivraj Sonwane, a Java-focused software engineer in Pune. I
+              develop backend systems, full-stack products and testing workflows
+              that make software easier to trust.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work"
+                >View selected work</a
+              >
+              <a class="button button-secondary" href="#resume">View resume</a>
+              <a
+                class="button button-text"
+                href="mailto:sonawaneshivrajk@gmail.com?subject=Entry-level%20software%20role%20for%20Shivraj%20Sonwane"
+                >Contact me</a
+              >
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="scan-strip" aria-label="Recruiter quick scan" data-reveal>
-            <div class="container scan-grid">
-                <article>
-                    <span>Availability</span>
-                    <strong>Actively looking</strong>
-                    <p>Fresher roles in Java backend, QA automation, and software testing.</p>
-                </article>
-                <article>
-                    <span>Best fit</span>
-                    <strong>Build + test teams</strong>
-                    <p>Comfortable moving between API logic, SQL checks, and test evidence.</p>
-                </article>
-                <article>
-                    <span>Signal</span>
-                    <strong>Hands-on proof</strong>
-                    <p>Payment flow, database tracker, QA artifacts, and project workflow thinking.</p>
-                </article>
-                <article>
-                    <span>Links</span>
-                    <strong>Ready to review</strong>
-                    <p><a href="https://www.linkedin.com/in/shivraj-sonawane-9437882aa/" target="_blank" rel="noopener noreferrer">LinkedIn</a> / <a href="https://github.com/shivrajks" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-                </article>
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+          <path d="M0,20 C240,60 480,0 720,30 C960,60 1200,10 1440,40 L1440,60 L0,60 Z" fill="rgba(46,196,182,0.06)" />
+          <path d="M0,35 C360,10 720,50 1080,25 C1260,15 1380,35 1440,30 L1440,60 L0,60 Z" fill="rgba(46,196,182,0.04)" />
+        </svg>
+      </div>
+
+      <section class="quick-scan" aria-label="Recruiter quick scan">
+        <div class="container scan-row" data-reveal data-stagger>
+          <div>
+            <span>Primary direction</span>
+            <strong>Java backend</strong>
+          </div>
+          <div>
+            <span>Also useful for</span>
+            <strong>Full-stack + QA</strong>
+          </div>
+          <div>
+            <span>Strongest evidence</span>
+            <strong>AI Job Copilot</strong>
+          </div>
+          <div>
+            <span>Availability</span>
+            <strong>Actively seeking</strong>
+          </div>
+        </div>
+      </section>
+
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+          <path d="M0,30 C200,55 400,5 600,35 C800,55 1000,10 1200,40 C1350,50 1420,30 1440,25 L1440,60 L0,60 Z" fill="rgba(46,196,182,0.05)" />
+        </svg>
+      </div>
+
+      <div class="chapter-divider" aria-hidden="true">
+        <span class="line"></span>
+        <span class="chapter-label">Selected Work</span>
+        <span class="line"></span>
+      </div>
+
+      <section
+        class="section work-section"
+        id="work"
+        aria-labelledby="work-title"
+      >
+        <div class="container section-intro" data-reveal>
+          <p class="note-label">Selected work</p>
+          <h2 id="work-title">
+            Projects presented as systems, decisions and checks.
+          </h2>
+          <p>
+            AI Job Copilot is the lead case study because it shows the widest
+            range: Java backend, authentication, data storage, frontend
+            workflow, deployment and verification.
+          </p>
+        </div>
+
+        <article
+          class="case-study case-feature"
+          aria-labelledby="copilot-title"
+          data-reveal
+        >
+          <div class="container case-grid">
+            <div class="case-copy">
+              <p class="project-kind">
+                Featured case study / Full-stack job-search platform
+              </p>
+              <h3 id="copilot-title">AI Job Copilot</h3>
+              <p class="case-lead">
+                A full-stack platform for managing resumes, comparing them with
+                job descriptions, generating application material, practising
+                interviews and tracking job applications.
+              </p>
+              <div class="link-row">
+                <a
+                  class="button button-primary"
+                  href="https://ai-job-copilot-frontend.onrender.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open live app</a
+                >
+                <a
+                  class="button button-secondary"
+                  href="https://github.com/shivrajks/ai-job-copilot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View source</a
+                >
+              </div>
             </div>
-        </section>
 
-        <section class="section about-section" id="about" aria-labelledby="about-title">
-            <div class="container split-layout">
-                <div class="section-heading" data-reveal>
-                    <p class="eyebrow">Profile core</p>
-                    <h2 id="about-title">A fresher profile tuned for clean APIs and reliable testing.</h2>
+            <aside class="quick-card" aria-labelledby="copilot-scan-title">
+              <h4 id="copilot-scan-title">Quick scan</h4>
+              <dl>
+                <div>
+                  <dt>Role</dt>
+                  <dd>Full-stack Java developer</dd>
                 </div>
-
-                <div class="about-copy" data-reveal>
-                    <p>
-                        I am a hands-on Java Backend Developer and QA-focused Software Engineer from Pune. I use project work to practice the habits teams care about: readable service layers, clear API contracts, database correctness, and repeatable test checks.
-                    </p>
-                    <p>
-                        My strongest direction is backend Java with Spring Boot, backed by testing discipline from Selenium, TestNG, Postman, manual test cases, bug reporting, SDLC, and STLC fundamentals.
-                    </p>
-
-                    <div class="principle-grid" aria-label="Operating principles">
-                        <article>
-                            <span>Build</span>
-                            <p>APIs with predictable request flows, service boundaries, and integration points.</p>
-                        </article>
-                        <article>
-                            <span>Verify</span>
-                            <p>Use Postman, manual cases, and automation practice to make behavior inspectable.</p>
-                        </article>
-                        <article>
-                            <span>Debug</span>
-                            <p>Trace defects from symptoms to data, logs, API payloads, and reproducible steps.</p>
-                        </article>
-                    </div>
+                <div>
+                  <dt>Backend</dt>
+                  <dd>Java 21, Spring Boot, Security, JWT</dd>
                 </div>
+                <div>
+                  <dt>Data</dt>
+                  <dd>PostgreSQL, Redis, Neon, Upstash</dd>
+                </div>
+                <div>
+                  <dt>Frontend</dt>
+                  <dd>Next.js, React, TypeScript, Zustand</dd>
+                </div>
+                <div>
+                  <dt>Status</dt>
+                  <dd>Live on Render; free tier may wake slowly</dd>
+                </div>
+              </dl>
+            </aside>
+
+            <div class="narrative-strip">
+              <div>
+                <span>01</span><strong>Problem</strong>
+                <p>
+                  Job seekers often split resumes, job descriptions, interview
+                  practice and application tracking across separate tools.
+                </p>
+              </div>
+              <div>
+                <span>02</span><strong>Product</strong>
+                <p>
+                  One workflow connects resume upload, ATS-style matching,
+                  tailoring, cover letters, interviews and applications.
+                </p>
+              </div>
+              <div>
+                <span>03</span><strong>Architecture</strong>
+                <p>
+                  Next.js frontend talks to Spring Boot APIs backed by
+                  PostgreSQL, Redis and protected user-owned records.
+                </p>
+              </div>
+              <div>
+                <span>04</span><strong>Verification</strong>
+                <p>
+                  Backend tests completed successfully; frontend lint,
+                  type-check and production build were verified in the project
+                  README.
+                </p>
+              </div>
             </div>
-        </section>
 
-        <section class="section skills-section" id="skills" aria-labelledby="skills-title">
-            <div class="container">
-                <div class="section-heading narrow" data-reveal>
-                    <p class="eyebrow">Skill matrix</p>
-                    <h2 id="skills-title">Grouped by how a recruiter screens the work.</h2>
-                    <p>Backend implementation, testing evidence, database design, and tools are separated so the role fit is visible in seconds.</p>
-                </div>
-
-                <div class="skill-matrix">
-                    <article class="skill-cluster" data-reveal>
-                        <div class="cluster-head">
-                            <span>Backend</span>
-                            <small>API and service layer</small>
-                        </div>
-                        <div class="chip-cloud">
-                            <span>Java</span>
-                            <span>Spring Boot</span>
-                            <span>REST APIs</span>
-                            <span>Microservices</span>
-                            <span>Stripe Checkout</span>
-                            <span>Webhooks</span>
-                        </div>
-                    </article>
-
-                    <article class="skill-cluster" data-reveal>
-                        <div class="cluster-head">
-                            <span>Testing</span>
-                            <small>QA mindset and evidence</small>
-                        </div>
-                        <div class="chip-cloud">
-                            <span>Manual Testing</span>
-                            <span>Automation Testing</span>
-                            <span>Selenium WebDriver</span>
-                            <span>TestNG</span>
-                            <span>API Testing</span>
-                            <span>Bug Reporting</span>
-                            <span>Regression Testing</span>
-                            <span>Functional Testing</span>
-                            <span>SDLC</span>
-                            <span>STLC</span>
-                        </div>
-                    </article>
-
-                    <article class="skill-cluster" data-reveal>
-                        <div class="cluster-head">
-                            <span>Database</span>
-                            <small>Design and query logic</small>
-                        </div>
-                        <div class="chip-cloud">
-                            <span>SQL</span>
-                            <span>Oracle SQL</span>
-                            <span>MySQL</span>
-                            <span>Tables</span>
-                            <span>Relationships</span>
-                            <span>Triggers</span>
-                            <span>Sequences</span>
-                            <span>Stored Procedures</span>
-                        </div>
-                    </article>
-
-                    <article class="skill-cluster" data-reveal>
-                        <div class="cluster-head">
-                            <span>Tools</span>
-                            <small>Team workflow</small>
-                        </div>
-                        <div class="chip-cloud">
-                            <span>Postman</span>
-                            <span>Git</span>
-                            <span>GitHub</span>
-                            <span>Problem Solving</span>
-                            <span>Debugging</span>
-                            <span>Test Documentation</span>
-                        </div>
-                    </article>
-
-                    <article class="skill-cluster" data-reveal>
-                        <div class="cluster-head">
-                            <span>Frontend</span>
-                            <small>Interface fundamentals</small>
-                        </div>
-                        <div class="chip-cloud">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>React / Next.js direction</span>
-                            <span>Responsive UI</span>
-                        </div>
-                    </article>
-                </div>
+            <div class="case-details">
+              <details open>
+                <summary>Backend engineering</summary>
+                <p>
+                  Authentication uses access and refresh tokens, password
+                  hashing, logout flows and ownership checks so user records
+                  stay separated. Resume upload supports PDF and DOCX parsing,
+                  then connects parsed information to job-description analysis
+                  and application records.
+                </p>
+              </details>
+              <details>
+                <summary>Frontend experience</summary>
+                <p>
+                  The dashboard gives users places to manage resumes, jobs, ATS
+                  reports, interview preparation, analytics and application
+                  stages with responsive views and clear empty states.
+                </p>
+              </details>
+              <details>
+                <summary>Testing and deployment</summary>
+                <p>
+                  The public project documentation reports a completed backend
+                  test suite, frontend linting, type-checking and production
+                  build checks. The application is deployed with Render, Neon
+                  and Upstash.
+                </p>
+              </details>
+              <details>
+                <summary>Screenshot status</summary>
+                <p>
+                  No sanitized AI Job Copilot screenshots exist in this
+                  portfolio repository yet. Reserved path:
+                  <code>assets/projects/ai-job-copilot/</code>.
+                </p>
+              </details>
             </div>
-        </section>
+          </div>
+        </article>
 
-        <section class="section projects-section" id="projects" aria-labelledby="projects-title">
-            <div class="container">
-                <div class="section-heading" data-reveal>
-                    <p class="eyebrow">Proof of work</p>
-                    <h2 id="projects-title">Projects shown as decisions, not screenshots.</h2>
-                    <p>Each card explains the problem, the build choice, the testing proof, and why it matters for a junior role.</p>
-                </div>
-
-                <div class="project-stack">
-                    <article class="project-card project-feature" data-reveal>
-                        <div class="project-copy">
-                            <div class="project-kicker">
-                                <span>Primary backend proof</span>
-                                <small>Java + Spring Boot</small>
-                            </div>
-                            <h3>Payment Integration System</h3>
-                            <p>
-                                A secure payment flow using Spring Boot microservices, Stripe Checkout, webhook-based payment confirmation, REST APIs, and Postman verification.
-                            </p>
-
-                            <div class="evidence-grid">
-                                <div>
-                                    <span>Problem</span>
-                                    <p>Accept payment requests and confirm status without trusting only the browser redirect.</p>
-                                </div>
-                                <div>
-                                    <span>Solution</span>
-                                    <p>Separate validation, processing, and Stripe provider responsibilities across service-style boundaries.</p>
-                                </div>
-                                <div>
-                                    <span>Testing</span>
-                                    <p>Used Stripe test mode and Postman collections to verify session creation and webhook behavior.</p>
-                                </div>
-                                <div>
-                                    <span>Result</span>
-                                    <p>Demonstrates API design, third-party integration, and secure payment flow reasoning.</p>
-                                </div>
-                            </div>
-
-                            <div class="tech-row" aria-label="Payment project technologies">
-                                <span>Java</span>
-                                <span>Spring Boot</span>
-                                <span>Microservices</span>
-                                <span>Stripe API</span>
-                                <span>Webhooks</span>
-                                <span>Postman</span>
-                            </div>
-                        </div>
-
-                        <div class="architecture-card" aria-label="Payment project architecture">
-                            <p class="diagram-label">Payment route map</p>
-                            <div class="service-map">
-                                <div class="service-node node-entry">checkout request</div>
-                                <div class="service-node">validation service</div>
-                                <div class="service-node">processing service</div>
-                                <div class="service-node node-accent">stripe provider</div>
-                                <div class="service-node">webhook listener</div>
-                                <div class="service-node node-pass">payment confirmed</div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <div class="project-grid">
-                        <article class="project-card" data-reveal>
-                            <div class="project-kicker">
-                                <span>Database proof</span>
-                                <small>Oracle SQL</small>
-                            </div>
-                            <h3>Personal Finance and Expense Tracker</h3>
-                            <p>
-                                SQL-based financial management system with tables, relationships, triggers, sequences, stored procedures, budget tracking, expense categories, and reporting queries.
-                            </p>
-                            <ul class="clean-list" aria-label="Finance project highlights">
-                                <li>Designed relational tables for income, expenses, categories, and budgets.</li>
-                                <li>Used stored procedures and triggers for automated checks and calculations.</li>
-                                <li>Wrote reporting queries to inspect spending patterns and category totals.</li>
-                            </ul>
-                            <div class="tech-row">
-                                <span>SQL</span>
-                                <span>Oracle SQL</span>
-                                <span>Triggers</span>
-                                <span>Stored Procedures</span>
-                            </div>
-                        </article>
-
-                        <article class="project-card" data-reveal>
-                            <div class="project-kicker">
-                                <span>Product direction</span>
-                                <small>Full-stack concept</small>
-                            </div>
-                            <h3>AI Job Application Copilot</h3>
-                            <p>
-                                A planned proof-of-work product direction for managing job applications with authentication, dashboard workflows, saved roles, and recruiter-ready application tracking.
-                            </p>
-                            <ul class="clean-list" aria-label="AI copilot project direction">
-                                <li>Spring Boot backend direction for accounts, saved jobs, and application status.</li>
-                                <li>React or Next.js frontend direction for a modern dashboard workflow.</li>
-                                <li>Designed around the real fresher job-search problem: tracking, tailoring, and follow-up.</li>
-                            </ul>
-                            <div class="tech-row">
-                                <span>Spring Boot</span>
-                                <span>React / Next.js</span>
-                                <span>Auth</span>
-                                <span>Dashboard UI</span>
-                            </div>
-                        </article>
-
-                        <article class="project-card" data-reveal>
-                            <div class="project-kicker">
-                                <span>QA proof</span>
-                                <small>Manual + automation</small>
-                            </div>
-                            <h3>QA and Testing Practice</h3>
-                            <p>
-                                Practice artifacts for manual test cases, bug reports, Selenium automation, TestNG execution, Postman API testing, and regression mindset.
-                            </p>
-                            <ul class="clean-list" aria-label="QA practice highlights">
-                                <li>Writes test cases with clear steps, expected results, and reproducible evidence.</li>
-                                <li>Automates browser flows using Selenium WebDriver and TestNG basics.</li>
-                                <li>Tests APIs in Postman and reports issues with concise failure details.</li>
-                            </ul>
-                            <div class="tech-row">
-                                <span>Selenium</span>
-                                <span>TestNG</span>
-                                <span>Postman</span>
-                                <span>Bug Reports</span>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+        <div class="container secondary-work">
+          <article
+            class="case-study compact-case"
+            aria-labelledby="payment-title"
+            data-reveal
+          >
+            <div>
+              <p class="project-kind">Backend workflow / Payment states</p>
+              <h3 id="payment-title">Payment Integration System</h3>
+              <p>
+                A Spring Boot payment workflow with validation, processing, a
+                Stripe-style checkout provider, webhook-style status updates and
+                API testing through a React dashboard.
+              </p>
             </div>
-        </section>
-
-        <section class="section qa-section" id="qa-lab" aria-labelledby="qa-title">
-            <div class="container qa-grid">
-                <div class="section-heading" data-reveal>
-                    <p class="eyebrow">QA lab</p>
-                    <h2 id="qa-title">Testing is treated as evidence, not a final checkbox.</h2>
-                    <p>For recruiter screening, this section makes the QA mindset visible: what is tested, how defects are described, and how automation supports confidence.</p>
-                </div>
-
-                <div class="qa-board" data-reveal>
-                    <article class="qa-ticket">
-                        <div class="ticket-topline">
-                            <span>TC-PAY-01</span>
-                            <strong>Functional</strong>
-                        </div>
-                        <h3>Create checkout session</h3>
-                        <p>Verify API returns a Stripe Checkout URL when valid product and amount data are submitted.</p>
-                        <small>Evidence: Postman response, status code, request payload</small>
-                    </article>
-
-                    <article class="qa-ticket">
-                        <div class="ticket-topline">
-                            <span>BUG-FORM-02</span>
-                            <strong>Defect</strong>
-                        </div>
-                        <h3>Missing validation message</h3>
-                        <p>Report actual result, expected result, reproduction steps, severity, and environment details.</p>
-                        <small>Evidence: screenshot, browser, steps, data used</small>
-                    </article>
-
-                    <article class="qa-ticket">
-                        <div class="ticket-topline">
-                            <span>AUTO-REG-03</span>
-                            <strong>Automation</strong>
-                        </div>
-                        <h3>Regression smoke path</h3>
-                        <p>Use Selenium WebDriver and TestNG to verify important UI flows keep working after changes.</p>
-                        <small>Evidence: test method, assertion, pass or fail output</small>
-                    </article>
-                </div>
+            <ol class="flow-list" aria-label="Payment architecture sequence">
+              <li><span>Request</span> Validate payload and card details.</li>
+              <li><span>Process</span> Create and store a payment record.</li>
+              <li>
+                <span>Checkout</span> Generate a simulated checkout session.
+              </li>
+              <li>
+                <span>Confirm</span> Update state through webhook-style
+                endpoints.
+              </li>
+            </ol>
+            <div class="link-row">
+              <a
+                class="button button-secondary"
+                href="https://github.com/shivrajks/payment-integration-system"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View GitHub</a
+              >
             </div>
-        </section>
+          </article>
 
-        <section class="section timeline-section" id="timeline" aria-labelledby="timeline-title">
-            <div class="container">
-                <div class="section-heading narrow" data-reveal>
-                    <p class="eyebrow">Timeline</p>
-                    <h2 id="timeline-title">Education and learning path.</h2>
-                </div>
-
-                <div class="timeline" aria-label="Education timeline">
-                    <article class="timeline-item" data-reveal>
-                        <time datetime="2022">2022 - 2025</time>
-                        <div>
-                            <h3>Bachelor of Computer Science</h3>
-                            <p>Vivekanand College</p>
-                            <span>CGPA: 7.67</span>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item" data-reveal>
-                        <time datetime="2021">2021 - 2022</time>
-                        <div>
-                            <h3>Higher Secondary Education</h3>
-                            <p>Shiveshwar High School</p>
-                            <span>Percentage: 84%</span>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item" data-reveal>
-                        <time datetime="2020">2020 - 2021</time>
-                        <div>
-                            <h3>Secondary Education</h3>
-                            <p>Residential High School</p>
-                            <span>Percentage: 74%</span>
-                        </div>
-                    </article>
-                </div>
+          <article
+            class="case-study compact-case finance-case"
+            aria-labelledby="finance-title"
+            data-reveal
+          >
+            <div>
+              <p class="project-kind">Database system / Oracle SQL</p>
+              <h3 id="finance-title">Personal Finance &amp; Expense Tracker</h3>
+              <p>
+                An Oracle SQL financial tracking system with users, categories,
+                transactions, budgets, savings goals, triggers, procedures,
+                views and monthly analysis.
+              </p>
             </div>
-        </section>
+            <ul class="evidence-list">
+              <li>
+                Models income, expenses, categories and budgets as related
+                records.
+              </li>
+              <li>
+                Uses sequences, triggers and stored procedures for database
+                behavior.
+              </li>
+              <li>Includes budget alerts and monthly analysis queries.</li>
+            </ul>
+            <p class="asset-note">
+              Included as supporting evidence until a public repository or
+              screenshots are supplied.
+            </p>
+          </article>
+        </div>
+      </section>
 
-        <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-            <div class="container contact-card" data-reveal>
-                <div class="contact-copy">
-                    <p class="eyebrow">Recruiter handoff</p>
-                    <h2 id="contact-title">Looking for a fresher who can build, test, and explain the work?</h2>
-                    <p>
-                        Shivraj is actively looking for Junior Software Engineer, Backend Java Developer, QA Automation Engineer, and Software Tester opportunities.
-                    </p>
-                    <div class="contact-actions">
-                        <a class="button button-primary" href="mailto:sonawaneshivrajk@gmail.com?subject=Fresher%20role%20opportunity%20for%20Shivraj%20Sonwane">Email Shivraj</a>
-                        <a class="button button-secondary" href="tel:+918767065834">Call</a>
-                    </div>
-                </div>
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+          <path d="M0,25 C180,5 360,45 540,20 C720,0 900,40 1080,15 C1260,0 1380,30 1440,20 L1440,60 L0,60 Z" fill="rgba(123,44,191,0.04)" />
+        </svg>
+      </div>
 
-                <address class="contact-list" aria-label="Contact details">
-                    <a href="mailto:sonawaneshivrajk@gmail.com">
-                        <span>Email</span>
-                        <strong>sonawaneshivrajk@gmail.com</strong>
-                    </a>
-                    <a href="tel:+918767065834">
-                        <span>Phone</span>
-                        <strong>+91 87670 65834</strong>
-                    </a>
-                    <p>
-                        <span>Location</span>
-                        <strong>Pune, Maharashtra, India</strong>
-                    </p>
-                    <a href="https://www.linkedin.com/in/shivraj-sonawane-9437882aa/" target="_blank" rel="noopener noreferrer">
-                        <span>LinkedIn</span>
-                        <strong>shivraj-sonawane-9437882aa</strong>
-                    </a>
-                    <a href="https://github.com/shivrajks" target="_blank" rel="noopener noreferrer">
-                        <span>GitHub</span>
-                        <strong>github.com/shivrajks</strong>
-                    </a>
-                </address>
+      <div class="chapter-divider" aria-hidden="true">
+        <span class="line"></span>
+        <span class="chapter-label">Verification</span>
+        <span class="line"></span>
+      </div>
+
+      <section
+        class="section quality-section"
+        id="quality"
+        aria-labelledby="quality-title"
+      >
+        <div class="container quality-grid">
+          <div class="section-intro" data-reveal>
+            <p class="note-label">How I verify my work</p>
+            <h2 id="quality-title">
+              Testing is part of the build, not a separate personality.
+            </h2>
+            <p>
+              Shivraj’s QA practice is useful because it changes how he writes
+              software: expected behavior is named early, failures are
+              reproduced clearly, and checks stay close to the workflow.
+            </p>
+          </div>
+
+          <div class="view-switcher" data-reveal>
+            <div
+              class="switch-controls"
+              aria-label="Build and test view"
+            >
+              <button
+                type="button"
+                aria-pressed="true"
+                data-view-tab="build"
+              >
+                Build view
+              </button>
+              <button
+                type="button"
+                aria-pressed="false"
+                data-view-tab="test"
+              >
+                Test view
+              </button>
             </div>
-        </section>
+            <div
+              class="switch-panel is-active"
+              data-view-panel="build"
+            >
+              <h3>Create a protected resume resource</h3>
+              <ul>
+                <li>Validate file type and request data.</li>
+                <li>Attach the resume to the authenticated user.</li>
+                <li>Parse PDF or DOCX content before analysis.</li>
+                <li>Return clear success and failure states to the UI.</li>
+              </ul>
+            </div>
+            <div
+              class="switch-panel"
+              data-view-panel="test"
+              hidden
+            >
+              <h3>Verify the behavior</h3>
+              <ul>
+                <li>Reject unsupported files and empty uploads.</li>
+                <li>Confirm one user cannot access another user’s resume.</li>
+                <li>Check parsed fields against expected content.</li>
+                <li>
+                  Run backend tests, frontend type-check and production build.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section proof-section"
+        id="proof"
+        aria-labelledby="proof-title"
+      >
+        <div class="container section-intro" data-reveal>
+          <p class="note-label">Proof</p>
+          <h2 id="proof-title">Checked for speed, access and small screens.</h2>
+          <p>
+            Current portfolio checks are visible here so recruiters can scan the
+            quality work instead of guessing.
+          </p>
+        </div>
+        <div class="container proof-grid" data-reveal data-stagger>
+          <article class="proof-card">
+            <span>Lighthouse</span>
+            <strong>95+</strong>
+            <p>Performance, accessibility, best practices and SEO (local).</p>
+          </article>
+          <article class="proof-card">
+            <span>Validation</span>
+            <strong>HTML + JS</strong>
+            <p><code>node --check</code> passes. Re-run HTML validator before deploy.</p>
+          </article>
+          <article class="proof-card">
+            <span>Responsive</span>
+            <strong>8 viewports</strong>
+            <p>Desktop, tablet and mobile checked in Chrome.</p>
+          </article>
+          <article class="proof-card">
+            <span>Interaction</span>
+            <strong>Keyboard ready</strong>
+            <p>Focus states, menu open/close and Escape behavior verified.</p>
+          </article>
+          <article class="proof-card">
+            <span>Motion</span>
+            <strong>Reduced motion</strong>
+            <p>Reveal effects are disabled when users prefer less motion.</p>
+          </article>
+          <article class="proof-card">
+            <span>Links</span>
+            <strong>Local assets</strong>
+            <p>Styles, scripts, favicon and resume links return successfully.</p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section capabilities-section"
+        id="capabilities"
+        aria-labelledby="capabilities-title"
+      >
+        <div class="container section-intro" data-reveal>
+          <p class="note-label">Capabilities</p>
+          <h2 id="capabilities-title">Skills grouped by responsibility.</h2>
+        </div>
+        <div class="container capability-grid" data-reveal data-stagger>
+          <section aria-labelledby="build-title">
+            <h3 id="build-title">Build</h3>
+            <p>Java, Spring Boot, REST APIs, React, Next.js, TypeScript</p>
+          </section>
+          <section aria-labelledby="store-title">
+            <h3 id="store-title">Store</h3>
+            <p>
+              PostgreSQL, Oracle SQL, MySQL, Redis, schema design, SQL
+              procedures
+            </p>
+          </section>
+          <section aria-labelledby="verify-title">
+            <h3 id="verify-title">Verify</h3>
+            <p>
+              Selenium WebDriver, TestNG, Postman, manual testing, API testing,
+              regression checks
+            </p>
+          </section>
+          <section aria-labelledby="ship-title">
+            <h3 id="ship-title">Ship</h3>
+            <p>Git, GitHub, Docker, Render, Vercel, Neon, Upstash</p>
+          </section>
+        </div>
+      </section>
+
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+          <path d="M0,30 C360,5 720,50 1080,20 C1260,10 1380,35 1440,28 L1440,60 L0,60 Z" fill="rgba(255,183,3,0.04)" />
+        </svg>
+      </div>
+
+      <section
+        class="section about-section"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="container about-grid">
+          <div class="section-intro" data-reveal>
+            <p class="note-label">About</p>
+            <h2 id="about-title">
+              A fresher engineer with backend direction and testing habits.
+            </h2>
+          </div>
+          <div class="about-copy" data-reveal>
+            <p>
+              Shivraj is based in Pune and completed a Bachelor of Computer
+              Science. His main direction is Java backend engineering, with
+              practical work across frontend interfaces, databases and testing
+              workflows.
+            </p>
+            <p>
+              Testing practice influences how he builds: he thinks in request
+              paths, expected results, ownership boundaries, reproducible
+              defects and checks that make behavior easier to review.
+            </p>
+            <p>
+              He is actively seeking entry-level opportunities in Java backend
+              development, full-stack development, QA automation and software
+              testing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section journey-section"
+        id="journey"
+        aria-labelledby="journey-title"
+      >
+        <div class="container section-intro" data-reveal>
+          <p class="note-label">Journey</p>
+          <h2 id="journey-title">Learning path and project evidence.</h2>
+        </div>
+        <div class="container journey-list" data-reveal data-stagger>
+          <article>
+            <time datetime="2022">2022 - 2025</time>
+            <h3>Bachelor of Computer Science</h3>
+            <p>Vivekanand College. CGPA: 7.67.</p>
+          </article>
+          <article>
+            <time>Testing practice</time>
+            <h3>Manual, API and automation checks</h3>
+            <p>
+              Practised test-case writing, expected versus actual results,
+              defect reproduction, Postman API checks, Selenium WebDriver and
+              TestNG basics.
+            </p>
+          </article>
+          <article>
+            <time>Project work</time>
+            <h3>Backend, database and full-stack systems</h3>
+            <p>
+              Built payment workflow, Oracle SQL finance tracker and AI Job
+              Copilot with Java, Spring Boot, frontend workflows, databases and
+              deployment tooling.
+            </p>
+          </article>
+          <article>
+            <time>Now</time>
+            <h3>Entry-level role search</h3>
+            <p>
+              Looking for teams where backend implementation and software
+              quality both matter.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section resume-section"
+        id="resume"
+        aria-labelledby="resume-title"
+      >
+        <div class="container resume-grid">
+          <div class="section-intro" data-reveal>
+            <p class="note-label">Resume</p>
+            <h2 id="resume-title">Resume PDF ready for recruiters.</h2>
+            <p>
+              Download the current PDF resume, or open the Markdown source used
+              to keep the portfolio copy aligned.
+            </p>
+            <div class="link-row">
+              <a class="button button-primary" href="assets/Resume.pdf" download
+                >Download resume PDF</a
+              >
+              <a
+                class="button button-secondary"
+                href="content/Shivraj-Sonwane-Resume.md"
+                >Open resume source</a
+              >
+            </div>
+          </div>
+          <aside class="resume-preview" data-reveal aria-label="Resume preview">
+            <h3>Resume preview</h3>
+            <dl>
+              <div>
+                <dt>Target roles</dt>
+                <dd>
+                  Java backend, full-stack, QA automation, software testing
+                </dd>
+              </div>
+              <div>
+                <dt>Education</dt>
+                <dd>Bachelor of Computer Science, Vivekanand College</dd>
+              </div>
+              <div>
+                <dt>Project highlights</dt>
+                <dd>
+                  AI Job Copilot, Payment Integration System, Oracle SQL finance
+                  tracker
+                </dd>
+              </div>
+              <div>
+                <dt>Primary skills</dt>
+                <dd>
+                  Java, Spring Boot, REST APIs, SQL, React, Postman, Selenium
+                </dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        class="section contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container contact-grid" data-reveal>
+          <div>
+            <p class="note-label">Contact</p>
+            <h2 id="contact-title">Let’s build something dependable.</h2>
+            <p>
+              Open to Java backend, full-stack, QA automation and
+              software-testing opportunities.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="mailto:sonawaneshivrajk@gmail.com?subject=Entry-level%20software%20role%20for%20Shivraj%20Sonwane"
+                >Email Shivraj</a
+              >
+              <button
+                class="button button-secondary"
+                type="button"
+                data-copy-email="sonawaneshivrajk@gmail.com"
+              >
+                Copy email
+              </button>
+            </div>
+            <p class="copy-status" data-copy-status aria-live="polite"></p>
+          </div>
+          <address class="contact-list">
+            <a href="mailto:sonawaneshivrajk@gmail.com"
+              ><span>Email</span><strong>sonawaneshivrajk@gmail.com</strong></a
+            >
+            <a
+              href="https://github.com/shivrajks"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span>GitHub</span><strong>github.com/shivrajks</strong></a
+            >
+            <a
+              href="https://www.linkedin.com/in/shivraj-sonawane-9437882aa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span>LinkedIn</span
+              ><strong>shivraj-sonawane-9437882aa</strong></a
+            >
+            <p>
+              <span>Location</span><strong>Pune, Maharashtra, India</strong>
+            </p>
+          </address>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-grid">
-            <p>&copy; <span id="year">2026</span> Shivraj Sonwane. Built as a fast static portfolio.</p>
-            <a href="#home">Back to console</a>
-        </div>
+      <div class="container footer-row">
+        <p>
+          &copy; <span id="year">2026</span> Shivraj Sonwane. Static HTML, CSS
+          and JavaScript.
+        </p>
+        <a href="#home">Back to top</a>
+      </div>
     </footer>
-</body>
+
+    <!-- Floating gold berry particles -->
+    <div aria-hidden="true" style="position:fixed;inset:0;pointer-events:none;z-index:0;">
+      <span class="berry-particle" style="left:10%;--dur:18s;--delay:0s;"></span>
+      <span class="berry-particle" style="left:25%;--dur:22s;--delay:3s;"></span>
+      <span class="berry-particle" style="left:45%;--dur:16s;--delay:6s;"></span>
+      <span class="berry-particle" style="left:65%;--dur:20s;--delay:2s;"></span>
+      <span class="berry-particle" style="left:80%;--dur:24s;--delay:8s;"></span>
+      <span class="berry-particle" style="left:92%;--dur:19s;--delay:5s;"></span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
