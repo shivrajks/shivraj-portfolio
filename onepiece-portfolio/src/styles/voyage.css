@@ -1,0 +1,107 @@
+/* ═══════════════════════════════════════════════════════
+   VOYAGE TIMELINE — Sea route journey
+   ═══════════════════════════════════════════════════════ */
+
+.voyage-section {
+  background: var(--deep-sea);
+}
+
+.voyage-timeline {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+/* Sea route line */
+.voyage-timeline::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    var(--sky),
+    var(--ocean),
+    var(--red),
+    var(--gold)
+  );
+  border-radius: 2px;
+}
+
+.voyage-stop {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+}
+
+.voyage-stop:last-child {
+  margin-bottom: 0;
+}
+
+/* Island dot */
+.voyage-dot {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.25rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid var(--red);
+  background: var(--deep-sea);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  animation: dot-pulse 2s ease-in-out infinite;
+}
+
+.voyage-dot::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+}
+
+.voyage-stop:last-child .voyage-dot {
+  border-color: var(--gold);
+  animation: dot-pulse 1.5s ease-in-out infinite;
+}
+
+.voyage-stop:last-child .voyage-dot::after {
+  background: var(--gold);
+}
+
+.voyage-year {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+.voyage-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 0.35rem;
+}
+
+.voyage-text {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Connect the dots with a wavy SVG line option */
+.voyage-wave-line {
+  position: absolute;
+  left: -2.5rem;
+  top: 24px;
+  width: 24px;
+  height: calc(100% - 24px);
+  overflow: hidden;
+}

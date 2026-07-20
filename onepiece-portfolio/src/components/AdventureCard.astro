@@ -1,0 +1,95 @@
+---
+interface Props {
+  project: {
+    id: string;
+    chapter: number;
+    title: string;
+    subtitle: string;
+    description: string;
+    links: { live?: string; source?: string };
+    island: string;
+    stats: Array<{ label: string; value: string }>;
+    narrative?: Array<{ step: string; text: string }>;
+    details?: Array<{ title: string; text: string }>;
+    flow?: string[];
+    bullets?: string[];
+  };
+}
+
+const { project } = Astro.props;
+---
+
+<article class="adventure-card" data-reveal>
+  <div class="chapter-strip">
+    <span class="chapter-number">{project.chapter}</span>
+    <div class="chapter-info">
+      <h3>{project.title}</h3>
+      <span class="subtitle">{project.subtitle}</span>
+    </div>
+    <span class="island-badge">⚓ {project.island}</span>
+  </div>
+
+  <div class="adventure-body">
+    <p class="adventure-desc">{project.description}</p>
+
+    <div class="stat-row">
+      {project.stats.map((stat) => (
+        <dl class="stat-cell">
+          <dt>{stat.label}</dt>
+          <dd>{stat.value}</dd>
+        </dl>
+      ))}
+    </div>
+
+    {project.narrative && (
+      <div class="narrative-strip">
+        {project.narrative.map((step, i) => (
+          <div class="narrative-step">
+            <span class="step-label">0{i + 1} — {step.step}</span>
+            <p>{step.text}</p>
+          </div>
+        ))}
+      </div>
+    )}
+
+    {project.flow && (
+      <ol class="flow-list">
+        {project.flow.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ol>
+    )}
+
+    {project.bullets && (
+      <ul class="evidence-list">
+        {project.bullets.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    )}
+
+    {project.details && (
+      <div class="adventure-details">
+        {project.details.map((d) => (
+          <details>
+            <summary>{d.title}</summary>
+            <p>{d.text}</p>
+          </details>
+        ))}
+      </div>
+    )}
+
+    <div class="link-row">
+      {project.links.live && (
+        <a class="button button-primary" href={project.links.live} target="_blank" rel="noopener noreferrer">
+          Open Live App
+        </a>
+      )}
+      {project.links.source && (
+        <a class="button button-secondary" href={project.links.source} target="_blank" rel="noopener noreferrer">
+          View Source
+        </a>
+      )}
+    </div>
+  </div>
+</article>

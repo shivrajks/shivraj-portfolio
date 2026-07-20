@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import WaveDivider from "../components/WaveDivider.astro";
+import ChapterDivider from "../components/ChapterDivider.astro";
+import WantedPoster from "../components/WantedPoster.astro";
+import AdventureCard from "../components/AdventureCard.astro";
+import DevilFruit from "../components/DevilFruit.astro";
+import VoyageTimeline from "../components/VoyageTimeline.astro";
+import JoinCrew from "../components/JoinCrew.astro";
+import Footer from "../components/Footer.astro";
+import { PROJECTS } from "../data/content";
+---
+
+<Layout>
+  <Header />
+
+  <main id="main">
+    <Hero />
+
+    <WaveDivider color="var(--deep-sea-mid)" />
+
+    <ChapterDivider chapter="Chapter 1 — The Captain's Log" />
+
+    <WantedPoster />
+
+    <WaveDivider color="var(--deep-sea)" />
+
+    <ChapterDivider chapter="Chapter 2 — Adventures on the Grand Line" />
+
+    <section class="adventures-section section" id="adventures" aria-labelledby="adventures-title">
+      <div class="container">
+        <div class="section-intro" data-reveal>
+          <p class="note-label">Adventures</p>
+          <h2 id="adventures-title">Projects Told as Voyages</h2>
+          <p style="color: var(--text-dim); max-width: 600px;">
+            Every project is an island visited on the Grand Line. Each one
+            taught a new lesson and earned a new bounty.
+          </p>
+        </div>
+
+        {PROJECTS.map((project) => (
+          <AdventureCard project={project} />
+        ))}
+      </div>
+    </section>
+
+    <WaveDivider color="var(--deep-sea-mid)" />
+
+    <ChapterDivider chapter="Chapter 3 — Devil Fruits of Power" />
+
+    <DevilFruit />
+
+    <WaveDivider color="var(--deep-sea)" />
+
+    <ChapterDivider chapter="Chapter 4 — The Voyage So Far" />
+
+    <VoyageTimeline />
+
+    <WaveDivider color="var(--deep-sea-mid)" />
+
+    <ChapterDivider chapter="Chapter 5 — Join My Crew" />
+
+    <JoinCrew />
+  </main>
+
+  <Footer />
+
+  <!-- Floating berry particles -->
+  <div aria-hidden="true">
+    <span class="berry-particle" style="left:10%;--dur:18s;--delay:0s;"></span>
+    <span class="berry-particle" style="left:25%;--dur:22s;--delay:3s;"></span>
+    <span class="berry-particle" style="left:45%;--dur:16s;--delay:6s;"></span>
+    <span class="berry-particle" style="left:65%;--dur:20s;--delay:2s;"></span>
+    <span class="berry-particle" style="left:80%;--dur:24s;--delay:8s;"></span>
+    <span class="berry-particle" style="left:92%;--dur:19s;--delay:5s;"></span>
+  </div>
+</Layout>

@@ -1,0 +1,174 @@
+/* ═══════════════════════════════════════════════════════
+   WANTED POSTER — About section
+   ═══════════════════════════════════════════════════════ */
+
+.wanted-section {
+  background: var(--deep-sea);
+}
+
+.wanted-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 720px) {
+  .wanted-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.wanted-card {
+  background:
+    linear-gradient(135deg, #c9935a 0%, #a67530 40%, #8b5e1f 100%);
+  border: 6px solid #5c3a0e;
+  border-radius: 4px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 0 60px rgba(92, 58, 14, 0.3);
+}
+
+/* Aged paper texture overlay */
+.wanted-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(92, 58, 14, 0.05) 2px,
+      rgba(92, 58, 14, 0.05) 4px
+    );
+  pointer-events: none;
+}
+
+.wanted-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.wanted-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #3a1f00;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 0 rgba(255, 205, 0, 0.4);
+}
+
+.wanted-header .epithet {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: #5c3a0e;
+  margin-top: 0.25rem;
+}
+
+.wanted-photo {
+  width: 160px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  background: #d4a86a;
+  border: 3px solid #5c3a0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.wanted-photo .initials {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  color: #3a1f00;
+  opacity: 0.7;
+}
+
+.wanted-bounty {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.wanted-bounty .label {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: #5c3a0e;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.wanted-bounty .amount {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: #3a1f00;
+  text-shadow: 1px 1px 0 rgba(255, 205, 0, 0.3);
+}
+
+.wanted-crime {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #5c3a0e;
+  position: relative;
+  z-index: 1;
+}
+
+.wanted-crime .label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: #5c3a0e;
+  text-transform: uppercase;
+}
+
+.wanted-crime p {
+  font-size: 0.9rem;
+  color: #3a1f00;
+  line-height: 1.5;
+  margin-top: 0.25rem;
+}
+
+/* About copy */
+.about-copy {
+  position: relative;
+}
+
+.about-copy p {
+  margin-bottom: 1rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.about-copy p:first-child::first-letter {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  float: left;
+  margin-right: 0.5rem;
+  color: var(--red);
+  line-height: 1;
+}
+
+.about-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.about-skills .skill-tag {
+  padding: 0.35rem 0.75rem;
+  background: rgba(215, 0, 0, 0.15);
+  border: 1px solid rgba(215, 0, 0, 0.3);
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--sky);
+  font-family: var(--font-mono);
+}

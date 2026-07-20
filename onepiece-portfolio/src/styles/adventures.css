@@ -1,0 +1,271 @@
+/* ═══════════════════════════════════════════════════════
+   ADVENTURES — Projects as manga panels
+   ═══════════════════════════════════════════════════════ */
+
+.adventures-section {
+  background: var(--deep-sea);
+}
+
+.adventure-card {
+  background: var(--panel);
+  border: 3px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 3rem;
+  transition: border-color 0.3s;
+}
+
+.adventure-card:hover {
+  border-color: var(--red);
+}
+
+/* Chapter header strip */
+.chapter-strip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--red);
+  color: var(--white);
+}
+
+.chapter-number {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  background: var(--gold);
+  color: var(--deep-sea);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chapter-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.chapter-info .subtitle {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  font-family: var(--font-mono);
+}
+
+.island-badge {
+  margin-left: auto;
+  padding: 0.3rem 0.75rem;
+  background: rgba(255, 205, 0, 0.2);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--gold);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Card body */
+.adventure-body {
+  padding: 1.5rem;
+}
+
+.adventure-desc {
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+/* Stats row */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-cell {
+  background: rgba(10, 22, 40, 0.6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+}
+
+.stat-cell dt {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.stat-cell dd {
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Narrative strip */
+.narrative-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 720px) {
+  .narrative-strip {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.narrative-step {
+  background: rgba(10, 22, 40, 0.5);
+  border-left: 3px solid var(--red);
+  padding: 0.75rem 1rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.narrative-step .step-label {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--red-glow);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.narrative-step p {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* Details / expandables */
+.adventure-details {
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+
+.adventure-details details {
+  border-bottom: 1px solid var(--line);
+}
+
+.adventure-details details:last-child {
+  border-bottom: none;
+}
+
+.adventure-details summary {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--sky);
+  padding: 0.75rem 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.adventure-details summary::before {
+  content: "▶";
+  font-size: 0.65rem;
+  color: var(--gold);
+  transition: transform 0.2s;
+}
+
+.adventure-details details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.adventure-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.adventure-details details p {
+  padding: 0 0 1rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* Flow list (for Payment project) */
+.flow-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  counter-reset: flow;
+}
+
+.flow-list li {
+  counter-increment: flow;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+.flow-list li::before {
+  content: counter(flow);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  background: var(--red);
+  color: var(--white);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flow-list li span {
+  font-weight: 700;
+  color: var(--sky);
+}
+
+/* Evidence list */
+.evidence-list {
+  margin: 1rem 0;
+}
+
+.evidence-list li {
+  padding: 0.4rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+.evidence-list li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.6rem;
+  top: 0.65rem;
+}
+
+/* Action row */
+.link-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.asset-note {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: 0.5rem;
+}

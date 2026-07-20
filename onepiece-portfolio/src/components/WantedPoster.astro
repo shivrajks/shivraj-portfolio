@@ -1,0 +1,72 @@
+---
+import { BOUNTY, LINKS } from "../data/content";
+---
+
+<section class="wanted-section section" id="crew" aria-labelledby="crew-title">
+  <div class="container">
+    <p class="note-label" data-reveal>The Captain's Log</p>
+
+    <div class="wanted-grid">
+      <div class="wanted-card" data-reveal>
+        <div class="wanted-header">
+          <h2>WANTED</h2>
+          <p class="epithet">{BOUNTY.epithet}</p>
+        </div>
+
+        <div class="wanted-photo">
+          <span class="initials">SS</span>
+        </div>
+
+        <div class="wanted-bounty">
+          <span class="label">Bounty</span>
+          <span class="amount">{BOUNTY.amount}</span>
+        </div>
+
+        <div class="wanted-crime">
+          <span class="label">Crime</span>
+          <p>{BOUNTY.crime}</p>
+        </div>
+      </div>
+
+      <div class="about-copy" data-reveal>
+        <h2 id="crew-title" style="margin-bottom: 1rem;">
+          The Captain Who Codes
+        </h2>
+
+        <p>
+          Shivraj is based in Pune and completed a Bachelor of Computer
+          Science. His main direction is Java backend engineering, with
+          practical work across frontend interfaces, databases and testing
+          workflows.
+        </p>
+
+        <p>
+          Testing practice influences how he builds: he thinks in request
+          paths, expected results, ownership boundaries, reproducible
+          defects and checks that make behavior easier to review.
+        </p>
+
+        <p>
+          He is actively seeking entry-level opportunities in Java backend
+          development, full-stack development, QA automation and software
+          testing.
+        </p>
+
+        <div class="about-skills">
+          {BOUNTY.skills.map((skill) => (
+            <span class="skill-tag">{skill}</span>
+          ))}
+        </div>
+
+        <div class="link-row" style="margin-top: 1.5rem;">
+          <a class="button button-primary" href="mailto:sonawaneshivrajk@gmail.com?subject=Entry-level%20software%20role%20for%20Shivraj%20Sonwane">
+            Join My Crew
+          </a>
+          <a class="button button-secondary" href={LINKS.resume} target="_blank" rel="noopener noreferrer">
+            View Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  chapter: string;
+}
+
+const { chapter } = Astro.props;
+---
+
+<div class="chapter-divider" data-reveal>
+  <span class="line"></span>
+  <span class="chapter-label">{chapter}</span>
+  <span class="line"></span>
+</div>

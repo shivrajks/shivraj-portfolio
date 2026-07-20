@@ -1,0 +1,83 @@
+---
+import { SITE, LINKS } from "../data/content";
+---
+
+<section class="join-crew-section section" id="join-crew" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="recruiting-banner" data-reveal>
+      <span class="line" style="flex:1;height:2px;background:linear-gradient(90deg,transparent,var(--gold));"></span>
+      <span class="recruit-text">Join My Crew</span>
+      <span class="line" style="flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent);"></span>
+    </div>
+
+    <div class="join-crew-grid">
+      <div class="join-crew-cta" data-reveal>
+        <h2 id="contact-title">Let's Build Something Dependable</h2>
+        <p>
+          Every great crew needs skilled pirates. Open to Java backend,
+          full-stack, QA automation and software-testing opportunities.
+          Ready to set sail on the next adventure.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            class="button button-primary"
+            href={`mailto:${SITE.email}?subject=Entry-level%20software%20role%20for%20Shivraj%20Sonwane`}
+          >
+            Email Shivraj
+          </a>
+          <button
+            class="button button-secondary"
+            type="button"
+            data-copy-email={SITE.email}
+          >
+            Copy Email
+          </button>
+        </div>
+        <p class="copy-status" data-copy-status aria-live="polite"></p>
+
+        <div class="crew-roles">
+          <div class="crew-role">
+            <div class="role-icon">⚔️</div>
+            <div class="role-name">Backend</div>
+            <div class="role-desc">Java, Spring Boot</div>
+          </div>
+          <div class="crew-role">
+            <div class="role-icon">🗺️</div>
+            <div class="role-name">Full-Stack</div>
+            <div class="role-desc">React, Next.js</div>
+          </div>
+          <div class="crew-role">
+            <div class="role-icon">🔍</div>
+            <div class="role-name">QA</div>
+            <div class="role-desc">Selenium, Testing</div>
+          </div>
+          <div class="crew-role">
+            <div class="role-icon">⚓</div>
+            <div class="role-name">Ship</div>
+            <div class="role-desc">Docker, CI/CD</div>
+          </div>
+        </div>
+      </div>
+
+      <address class="contact-list" data-reveal>
+        <a href={`mailto:${SITE.email}`}>
+          <span>Email</span>
+          <strong>{SITE.email}</strong>
+        </a>
+        <a href={LINKS.github} target="_blank" rel="noopener noreferrer">
+          <span>GitHub</span>
+          <strong>github.com/shivrajks</strong>
+        </a>
+        <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span>
+          <strong>shivraj-sonawane-9437882aa</strong>
+        </a>
+        <p>
+          <span>Location</span>
+          <strong>{SITE.location}</strong>
+        </p>
+      </address>
+    </div>
+  </div>
+</section>

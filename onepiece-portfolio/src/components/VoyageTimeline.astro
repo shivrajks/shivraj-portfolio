@@ -1,0 +1,27 @@
+---
+import { VOYAGE } from "../data/content";
+---
+
+<section class="voyage-section section" id="voyage" aria-labelledby="voyage-title">
+  <div class="container">
+    <div class="section-intro" data-reveal>
+      <p class="note-label">The Voyage So Far</p>
+      <h2 id="voyage-title">Charting the Course</h2>
+      <p style="color: var(--text-dim); max-width: 600px;">
+        Every great pirate has a journey. Here is mine — from setting sail
+        to chasing the One Piece of software engineering.
+      </p>
+    </div>
+
+    <div class="voyage-timeline" data-reveal>
+      {VOYAGE.map((stop) => (
+        <div class="voyage-stop">
+          <div class="voyage-dot"></div>
+          <span class="voyage-year">{stop.year}</span>
+          <h3 class="voyage-title">{stop.title}</h3>
+          <p class="voyage-text">{stop.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
